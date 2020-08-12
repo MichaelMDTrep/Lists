@@ -5,8 +5,8 @@ Kenzie assignment: List1
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
-
+__author__ = "Michael Trepanier"
+"https://stackoverflow.com/questions/13001226/python-program-with-match-ends"
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -26,9 +26,20 @@ __author__ = "???"
 
 
 def match_ends(words):
-    # your code here
-    return
+    words_count = 0
+    for word in words:
+        if len(word) >= 2 and word[-1] == word[0]:
+            words_count = words_count + 1
+    return words_count
 
+    # words_count = 0
+    # words_count = len(words)
+
+    # for word in words:
+    #     if len(words) >= 2 and words[0] == words[-1]:
+    #         count += 1
+    # return words[0] and words[-1:] == words[-1:]
+    # words += words
 
 # B. front_x
 # Given a list of strings, return a list with the strings in
