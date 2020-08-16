@@ -6,7 +6,8 @@ Kenzie assignment: List2
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
 __author__ = "Michael Trepanier got help from John Wilkinson"
-"https://stackoverflow.com/questions/3460161/remove-adjacent-duplicate-elements-from-a-list"
+"https://stackoverflow.com"
+"/questions/3460161/remove-adjacent-duplicate-elements-from-a-list"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
