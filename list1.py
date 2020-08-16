@@ -5,8 +5,9 @@ Kenzie assignment: List1
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
-
+__author__ = "Michael Trepanier"
+"https://stackoverflow.com/questions/13001226/python-program-with-match-ends"
+"https://kmee.github.io/treinamento-python/"
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -26,8 +27,11 @@ __author__ = "???"
 
 
 def match_ends(words):
-    # your code here
-    return
+    words_count = 0
+    for word in words:
+        if len(word) >= 2 and word[-1] == word[0]:
+            words_count = words_count + 1
+    return words_count
 
 
 # B. front_x
@@ -42,8 +46,19 @@ def match_ends(words):
 
 
 def front_x(words):
-    # your code here
-    return
+
+    list = []
+    other = []
+
+    for word in words:
+        if word.startswith('x'):
+            list.append(word)
+        else:
+            other.append(word)
+    list.sort()
+    other.sort()
+
+    return list + other
 
 
 # C. sort_last
@@ -56,8 +71,18 @@ def front_x(words):
 
 
 def sort_last(tuples):
-    # your code here
-    return
+    return sorted(tuples, key=sort_last_tuples)
+
+# Write a little function that takes a touple, and returns its last value.
+
+
+def sort_last_tuples(tuples):
+    return tuples[-1]
+#  sort_last_vaue()
+
+
+#
+    # return t[-1]
 
 
 # Provided simple test() function used in main() to print

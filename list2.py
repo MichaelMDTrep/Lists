@@ -5,7 +5,9 @@ Kenzie assignment: List2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Michael Trepanier got help from John Wilkinson"
+"https://stackoverflow.com"
+"/questions/3460161/remove-adjacent-duplicate-elements-from-a-list"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -28,9 +30,11 @@ __author__ = "???"
 
 
 def remove_adjacent(nums):
-    # your code here
-    return
-
+    answers = nums[:1]
+    for answer in nums[1:]:
+        if answer != answers[-1]:
+            answers.append(answer)
+    return answers
 
 # E. zip_merge
 # Given two lists, combine the values from their corresponding
@@ -43,10 +47,11 @@ def remove_adjacent(nums):
 
 
 def zip_merge(list1, list2):
-    # your code here
-    return
 
+    zipped = list(zip(list1, list2))
+    result = list(map("".join, zipped))
 
+    return result
 # F. empty_filter
 # Given a single list containing strings, empty strings, and
 # None values:  Return a new list with the same elements, but
@@ -57,9 +62,7 @@ def zip_merge(list1, list2):
 
 
 def empty_filter(list1):
-    # your code here
-    return
-
+    return list(filter(None, list1))
 
 # G. linear_merge
 # Given two lists sorted in increasing order, create and
@@ -71,14 +74,27 @@ def empty_filter(list1):
 # linear time and the two lists are already provided in
 # ascending sorted order.
 
+# list 1 = [1, 2, 3]
+# list2 = [4, 5, 6, 7]
+
 
 def linear_merge(list1, list2):
-    # your code here
-    return
+    list3 = []
+    # Look at the two lists so long as both are non-empty.
+    # Take whichever element [0] is smaller.
+    while len(list1) > 0 and len(list2) > 0:
+        if list1[0] < list2[0]:
+            list3.append(list1.pop(0))
+        else:
+            list3.append(list2.pop(0))
+    return list3 + list1 + list2
+
+    # return result
+
+    # Provided simple test() function used in main() to print
+    # what each function returns vs. what it's supposed to return.
 
 
-# Provided simple test() function used in main() to print
-# what each function returns vs. what it's supposed to return.
 def test(got, expected):
     if got == expected:
         prefix = ' OK '
